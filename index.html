@@ -13,15 +13,43 @@
 </head>
 
 <body>
-    
-    <div class="container">
-        <div class="form-group">
-            <input type="text" class="form-control" id="textInput" placeholder="Bsp. Stadt">
-        </div>
-    
-        <button type="submit" class="btn btn-primary" id="btnSearch">Submit</button>
+
+    <div class="page-header">
+        <h1 id="header">Temperatur vorschau</h1>
     </div>
-    
+
+    <div style="background:transparent !important" class="jumbotron">
+        <div class="container">
+            <h2 id="city">Bitte eine stadt eingeben!</h2>
+            <div class="form-group">
+                <input type="text" class="form-control" id="textInput" placeholder="Bsp. Stadt">
+            </div>
+
+            <p>
+                <button type="submit" class="btn btn-primary btn-lg" id="btnSearch">Submit</button>
+            </p>
+            <p id="aktTemp">Aktuelle Temperatur:</p>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr id="moreColor">
+                        <th scope="col-2 col-md-offset-1">Heute</th>
+                        <th scope="col-2">Morgen</th>
+                        <th scope="col-2">Übermorgen</th>
+                        <th scope="col-2">In vier tagen</th>
+                        <th scope="col-2">In fünf tagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Temperatur</th>
+                    </tr>
+                    <p>Durchschnitts Temperatur für die nächsten 5 tagen</p>
+                    <p id="avgTemp"></p>
+
+        </div>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

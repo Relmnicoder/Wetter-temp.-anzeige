@@ -1,0 +1,32 @@
+body{
+    background-image: url("wetter bild.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.getsWarmer{
+    background-color: crimson
+}
+.getsColder {
+    background-color: lightskyblue
+}
+#jumboNewcolor{
+    background-color: rgb(15, 35, 102, 0.4)
+}
+#city{
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+.container{
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    font-size: 1.4em;
+}
+#btnSearch{
+    float: right;
+}
+#header {
+    color: skyblue;
+    text-shadow: 2px 2px #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
