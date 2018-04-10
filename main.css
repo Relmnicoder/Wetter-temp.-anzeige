@@ -23,7 +23,7 @@ body{
     font-size: 1.4em;
 }
 #btnSearch{
-    float: right;
+    float: left;
 }
 #header {
     color: skyblue;
