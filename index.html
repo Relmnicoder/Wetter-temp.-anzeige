@@ -30,22 +30,31 @@
             </p>
             <p id="aktTemp">Aktuelle Temperatur:</p>
             <br />
-            <table class="table">
-                <thead>
-                    <tr id="moreColor">
-                        <th scope="col-2 col-md-offset-1">Heute</th>
-                        <th scope="col-2">Morgen</th>
-                        <th scope="col-2">Übermorgen</th>
-                        <th scope="col-2">In vier tagen</th>
-                        <th scope="col-2">In fünf tagen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Temperatur</th>
-                    </tr>
-                    <p>Durchschnitts Temperatur für die nächsten 5 tagen</p>
-                    <p id="avgTemp"></p>
+            <table class="table table-dark">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col-2"></th>
+                            <th scope="col-2">Heute</th>
+                            <th scope="col-2">Morgen</th>
+                            <th scope="col-2">Übermorgen</th>
+                            <th scope="col-2">In vier tagen</th>
+                            <th scope="col-2">In fünf tagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="theRow">
+                            <td scope="row">Temperatur</td>
+                            <td id="row1"></td>
+                            <td id="row2"></td>
+                            <td id="row3"></td>
+                            <td id="row4"></td>
+                            <td id="row5"></td>
+                        </tr>
+                        <div class="clearFloats"></div>
+                        <p id="rndText">Durchschnitts Temperatur für die nächsten 5 tagen</p>
+                        <p id="avgTemp"></p>
+                    </tbody>
+                </table>
 
         </div>
     </div>

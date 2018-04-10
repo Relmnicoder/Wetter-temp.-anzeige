@@ -30,3 +30,11 @@ body{
     text-shadow: 2px 2px #333;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+#rndText{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 auto;
+}
+.clearFloats{
+    clear: both;
+}

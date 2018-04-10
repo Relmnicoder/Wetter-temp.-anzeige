@@ -17,6 +17,7 @@ $(document).ready(function () {
                 var fourthDay = 0;
                 var fifthDay = 0;
                 var avgDays = 0;
+                
                 for (i = 0; i < (a2[0].list).length; i++) {
                     if (i < 8) {
                         firstDay += a2[0].list[i].main.temp;
@@ -35,17 +36,27 @@ $(document).ready(function () {
                     }
                     avgDays += a2[0].list[i].main.temp;
                 }
-                $("#avgTemp").html(" " + Math.round((firstDay / 8) -273.15)  + "°C");
-                $("#avgTemp").append(" " + Math.round((secondDay / 8) -273.15)  + "°C");
-                $("#avgTemp").append(" " + Math.round((thirdDay / 8) - 273.15) + "°C");
-                $("#avgTemp").append(" " + Math.round((fourthDay / 8) -273.15) + "°C");
-                $("#avgTemp").append(" " + Math.round((fifthDay / 8) -273.15) + "°C");
+                firstDay = Math.round((firstDay / 8) - 273.15);
+                secondDay = Math.round((secondDay / 8) - 273.15);
+                thirdDay = Math.round((thirdDay / 8) - 273.15);
+                fourthDay = Math.round((fourthDay / 8) - 273.15);
+                fifthDay = Math.round((fifthDay / 8) - 273.15);
 
-                if (aktTempRound < Math.round((avgDays / 8) -273.15)){
-                    $("#avgTemp").addClass("getsWarmer");
+                var tage = [firstDay, secondDay, thirdDay, fourthDay, fifthDay];
+
+                for (i = 0; i < tage.length; i++) {
+                    $("#row" + (i + 1)).html("<td scope='row'> " + tage[i] + "°C</td>");
                 }
-                else {
-                    $("avgTemp").addClass("getsColder");
+
+                for (i = 0; i < tage.length; i++) {
+                    if (aktTempRound < tage[i]) {
+                        $("#row"+(i + 1)).removeClass("getsColder");
+                        $("#row"+(i + 1)).addClass("getsWarmer");
+                    }
+                    else {
+                        $("#row"+(i + 1)).removeClass("getsWarmer");
+                        $("#row"+(i + 1)).addClass("getsColder");
+                    }
                 }
             })
 
