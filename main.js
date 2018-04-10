@@ -1,5 +1,6 @@
 $(document).ready(function () {
     $("#btnSearch").click(function () {
+       
         var url = $("#textInput").val();
         todayWeatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + url + "&appid=ee595a2e51b9aa75efcfd4297fb55b8c";
         forecastUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + url + "&appid=ee595a2e51b9aa75efcfd4297fb55b8c";
