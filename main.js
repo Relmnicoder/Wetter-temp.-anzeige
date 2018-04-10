@@ -9,7 +9,7 @@ $(document).ready(function () {
             .done(function (a1, a2, ) {
 
                 var aktTempRound = Math.round(a1[0].main.temp - 273.15);
-                $("#aktTemp").empty().append(" " + aktTempRound + "°C");
+                $("#aktStand").html("<td scope='row'> " + aktTempRound + "°C</td>");
 
                 var firstDay = 0;
                 var secondDay = 0;
@@ -17,7 +17,7 @@ $(document).ready(function () {
                 var fourthDay = 0;
                 var fifthDay = 0;
                 var avgDays = 0;
-                
+
                 for (i = 0; i < (a2[0].list).length; i++) {
                     if (i < 8) {
                         firstDay += a2[0].list[i].main.temp;
@@ -53,9 +53,13 @@ $(document).ready(function () {
                         $("#row"+(i + 1)).removeClass("getsColder");
                         $("#row"+(i + 1)).addClass("getsWarmer");
                     }
-                    else {
+                    else if (aktTempRound > tage[i]) {
                         $("#row"+(i + 1)).removeClass("getsWarmer");
                         $("#row"+(i + 1)).addClass("getsColder");
+                    }
+                    else {
+                        $("#row"+(i + 1)).removeClass("getsWarmer");
+                        $("#row"+(i + 1)).removeClass("getsColder");
                     }
                 }
             })

@@ -21,6 +21,7 @@
     <div style="background:transparent !important" class="jumbotron">
         <div class="container">
             <h2 id="city">Bitte eine stadt eingeben!</h2>
+            
             <div class="form-group">
                 <input type="text" class="form-control" id="textInput" placeholder="Bsp. Stadt">
             </div>
@@ -28,8 +29,9 @@
             <p>
                 <button type="submit" class="btn btn-primary btn-lg" id="btnSearch">Submit</button>
             </p>
-            <p id="aktTemp">Aktuelle Temperatur:</p>
+
             <br />
+
             <table class="table table-dark">
                     <thead class="thead-dark">
                         <tr>
@@ -49,6 +51,10 @@
                             <td id="row3"></td>
                             <td id="row4"></td>
                             <td id="row5"></td>
+                        </tr>
+                        <tr id="aktuellerTemp">
+                            <td scope="row">Aktuelle Temperatur: </td>
+                            <td id="aktStand"></td>
                         </tr>
                         <div class="clearFloats"></div>
                         <p id="rndText">Durchschnitts Temperatur für die nächsten 5 tagen</p>
